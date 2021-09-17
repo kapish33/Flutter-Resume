@@ -48,6 +48,7 @@ class Connect extends StatelessWidget {
             ),
           ],
         ),
+
         extendBody: true,
         bottomNavigationBar: CurvedNavigationBar(
           backgroundColor: Colors.green,
@@ -56,6 +57,7 @@ class Connect extends StatelessWidget {
             Icon(Icons.school, size: 30),
             Icon(Icons.contact_page, size: 30),
           ],
+          index: 2,
           onTap: (index) {
             // print(index);
             if (index == 0) {

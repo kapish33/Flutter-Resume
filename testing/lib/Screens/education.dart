@@ -56,6 +56,7 @@ class Education extends StatelessWidget {
             Icon(Icons.school, size: 30),
             Icon(Icons.contact_page, size: 30),
           ],
+          index: 1,
           onTap: (index) {
             // print(index);
             if (index == 0) {

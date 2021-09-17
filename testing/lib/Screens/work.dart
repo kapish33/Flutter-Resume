@@ -47,6 +47,7 @@ class Work extends StatelessWidget {
             Icon(Icons.school, size: 30),
             Icon(Icons.contact_page, size: 30),
           ],
+          index: 0,
           onTap: (index) {
             // print(index);
             if (index == 0) {
