@@ -11,64 +11,112 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          leading: const IconButton(
-            onPressed: null,
-            icon: Icon(
-              CupertinoIcons.search,
-              size: 28,
-              color: Colors.black,
-            ),
-          ),
+        appBar: AppBar(title: const Text('While ( ! ( Succeed )= try() ));'),
           actions: const [
             IconButton(
               onPressed: null,
               icon: Icon(
-                CupertinoIcons.envelope_open,
+                CupertinoIcons.profile_circled,
                 size: 28,
-                color: Colors.black,
-              ),
-            ),
-            IconButton(
-              onPressed: null,
-              icon: Icon(
-                CupertinoIcons.calendar,
-                size: 28,
-                color: Colors.black,
-              ),
-            ),
-            IconButton(
-              onPressed: null,
-              icon: Icon(
-                CupertinoIcons.bell,
-                size: 28,
-                color: Colors.black,
+                color: Colors.white,
               ),
             ),
           ],
         ),
-        extendBody: true,
+        body: Center(
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children:<Widget>[
+                Container(
+                  margin: const EdgeInsets.all(12.0),
+                  padding: const EdgeInsets.all(8.0),
+                  width: 300,
+                  decoration:BoxDecoration(
+                      borderRadius:BorderRadius.circular(8),
+                      color:const Color(0XFFFF0067)
+                  ),
+                  child: const Text("Dimesnions I Explored",style: TextStyle(color:Color(0XFFFFFFFF),fontSize:25),),
+                ),
+                Container(
+                  margin: const EdgeInsets.all(12.0),
+                  padding: const EdgeInsets.all(8.0),
+                  width: 280,
+                  decoration:BoxDecoration(
+                      borderRadius:BorderRadius.circular(8),
+                      color:const Color(0XFF1D1F33)
+                  ),
+                  child: const Text("Meditation",style: TextStyle(color:Color(0XFF22E67B),fontSize:25),),
+                ),
+                Container(
+                  width: 280,
+                  margin: const EdgeInsets.all(12.0),
+                  padding: const EdgeInsets.all(8.0),
+                  decoration:BoxDecoration(
+                      borderRadius:BorderRadius.circular(8),
+                      color:const Color(0XFF1D1F33)
+                  ),
+                  child: const Text("Digital Marketing",style: TextStyle(color:Color(0XFF22E67B),fontSize:25),),
+                ),
+                Container(
+                  width: 280,
+                  margin: const EdgeInsets.all(12.0),
+                  padding: const EdgeInsets.all(8.0),
+                  decoration:BoxDecoration(
+                      borderRadius:BorderRadius.circular(8),
+                      color:const Color(0XFF1D1F33)
+                  ),
+                  child: const Text("Content Writing",style: TextStyle(color:Color(0XFF22E67B),fontSize:25),),
+                ),
+                Container(
+                  margin: const EdgeInsets.all(12.0),
+                  padding: const EdgeInsets.all(8.0),
+                  width: 300,
+                  decoration:BoxDecoration(
+                      borderRadius:BorderRadius.circular(8),
+                      color:const Color(0XFFFF0067)
+                  ),
+                  child: const Text("Volleyball ",style: TextStyle(color:Color(0XFFFFFFFF),fontSize:25),),
+                ),
+                Container(
+                  margin: const EdgeInsets.all(12.0),
+                  padding: const EdgeInsets.all(8.0),
+                  width: 300,
+                  decoration:BoxDecoration(
+                      borderRadius:BorderRadius.circular(8),
+                      color:const Color(0XFFFF0067)
+                  ),
+                  child: const Text("Video Editing ",style: TextStyle(color:Color(0XFFFFFFFF),fontSize:25),),
+                ),
+
+              ]
+          ),
+        ),
         bottomNavigationBar: CurvedNavigationBar(
-          backgroundColor: Colors.green,
+          backgroundColor: const Color(0XFFEB1555),
           items: const <Widget>[
+            Icon(Icons.home,size: 30,color: Color(0XFF22E67B)),
             Icon(Icons.work, size: 30),
             Icon(Icons.school, size: 30),
             Icon(Icons.contact_page, size: 30),
           ],
+          // index: 0,
           onTap: (index) {
-            // print(index);
-            if (index == 0) {
+            if(index == 0){
               Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => Work()));
+                  .push(MaterialPageRoute(builder: (context) => const HomeScreen()));
             }
             if (index == 1) {
               Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => Education()));
+                  .push(MaterialPageRoute(builder: (context) => const Work()));
             }
             if (index == 2) {
               Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => Connect()));
+                  .push(MaterialPageRoute(builder: (context) => const Education()));
+            }
+            if (index == 3) {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => const Connect()));
             }
 
             //Handle button tap
@@ -76,15 +124,3 @@ class HomeScreen extends StatelessWidget {
         ));
   }
 }
-
-// class Page1 extends StatelessWidget {
-//   const Page1({Key? key}) : super(key: key);
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//         appBar: AppBar(
-//       title: Text('Page 1'),
-//     ));
-//   }
-// }
